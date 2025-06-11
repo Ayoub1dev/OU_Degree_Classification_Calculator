@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="script" href="script.js">
+  <title>OU Degree Classification Calculator</title>
+</head>
+<body>
+  <h2>Open University Degree Classification Calculator</h2>
+
+  <form id="degreeForm">
+    <h3>Level 2 Grades (4 modules)</h3>
+    <div id="level2">
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3" selected>Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select><br>
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3" selected>Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select><br>
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3" selected>Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select><br>
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3" selected>Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select>
+    </div>
+
+    <h3>Level 3 Grades (4 modules)</h3>
+    <div id="level3">
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3">Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select><br>
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3">Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select><br>
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3">Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select><br>
+      <select class="grade">
+        <option value="1">Grade 1 (Distinction)</option>
+        <option value="2">Grade 2 (Merit)</option>
+        <option value="3">Grade 3 (Pass)</option>
+        <option value="4">Grade 4</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calculateClassification()">Calculate Classification</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+
+</body>
+</html>
