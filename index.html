@@ -1,77 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <meta name="description"
+    content="Open University Degree Classification Calculator. Instantly estimate your OU honours classification (1st, 2:1, 2:2, 3rd) based on your module grades.">
+  <meta name="keywords"
+    content="Open University, OU classification calculator, OU degree calculator, honours classification, Open University grades, OU module grade calculator">
+  <meta name="author" content="[Your Name]">
   <title>OU Degree Classification Calculator</title>
+  <link rel="canonical" href="https://yourdomain.com/ou-calculator">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <h2>Open University Degree Classification Calculator</h2>
+  <header>
+    <h1>OU Degree Classification Calculator</h1>
+    <p>Use this free, easy-to-use tool to estimate your final honours classification from The Open University. Works for
+      360-credit undergraduate degrees under the new post-2023 classification rules.</p>
+    <button id="modeToggle" class="mode-btn">Switch to Dark Mode</button>
+  </header>
 
-  <form id="degreeForm">
-    <h3>Level 2 Grades (4 modules)</h3>
-    <div id="level2">
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3" selected>Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select><br>
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3" selected>Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select><br>
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3" selected>Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select><br>
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3" selected>Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select>
-    </div>
+  <main>
+    <form id="degreeForm">
+      <h2>Level 2 Grades (4 modules)</h2>
+      <div id="level2">
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3" selected>Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3" selected>Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3" selected>Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3" selected>Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+      </div>
 
-    <h3>Level 3 Grades (4 modules)</h3>
-    <div id="level3">
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3">Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select><br>
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3">Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select><br>
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3">Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select><br>
-      <select class="grade">
-        <option value="1">Grade 1 (Distinction)</option>
-        <option value="2">Grade 2 (Merit)</option>
-        <option value="3">Grade 3 (Pass)</option>
-        <option value="4">Grade 4</option>
-      </select>
-    </div>
+      <h2>Level 3 Grades (4 modules)</h2>
+      <div id="level3">
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3">Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3">Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3">Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+        <select class="grade">
+          <option value="1">Grade 1 (Distinction)</option>
+          <option value="2">Grade 2 (Merit)</option>
+          <option value="3">Grade 3 (Pass)</option>
+          <option value="4">Grade 4</option>
+        </select>
+      </div>
 
-    <button type="button" onclick="calculateClassification()">Calculate Classification</button>
-  </form>
+      <button type="button" onclick="calculateClassification()">Calculate Classification</button>
+      <div class="result" id="result"></div>
+    </form>
 
-  <div class="result" id="result"></div>
+    
 
+    <section class="summary printable">
+      <h2>📘 Quick Summary: How Your OU Degree Is Classified</h2>
+      <ul class="checklist">
+        <li>
+          <label><input type="checkbox">
+            <strong>Step 1 – Give Each Module a Grade:</strong>
+            Look at your Level 2 modules (usually 4). Each one gets a grade from 1 to 4:<br>
+            1 = Distinction (85%+), 2 = Merit (70–84%), 3 = Pass (55–69%), 4 = Just Passed (40–54%)
+          </label>
+        </li>
+        <li>
+          <label><input type="checkbox">
+            <strong>Step 2 – Add Up Your Level 2 Score:</strong>
+            Multiply each grade by 30 credits, then add them together.<br>
+            Example: 2 modules at Grade 2 + 2 at Grade 3 → (2×30×2) + (2×30×3) = 300
+          </label>
+        </li>
+        <li>
+          <label><input type="checkbox">
+            <strong>Step 3 – Add Your Level 3 Score (Then Double It):</strong>
+            Do the same as Step 2, but double the final result.<br>
+            Example: 4 modules at Grade 2 → 4×30×2 = 240 → 240×2 = 480
+          </label>
+        </li>
+        <li>
+          <label><input type="checkbox">
+            <strong>Step 4 – Add Level 2 + Level 3 Scores:</strong>
+            Just add both numbers from Step 2 and Step 3 to get your total score.<br>
+            Example: 300 + 480 = 780
+          </label>
+        </li>
+        <li>
+          <label><input type="checkbox">
+            <strong>Step 5 – Check the Classification Table:</strong>
+            Use your final score to see your degree class:<br>
+            ≤630 = First • 631–900 = 2:1 • 901–1170 = 2:2 • 1171+ = Third<br>
+            (If you're on the borderline, the system will check if you have enough top grades to bump you up.)
+          </label>
+        </li>
+      </ul>
 
+    </section>
+
+    <section class="tips printable">
+      <h2>🧠 Manual Calculation Tips</h2>
+      <ul>
+        <li>Each 30-credit module is weighted equally at its level.</li>
+        <li>Level 3 modules are <strong>double weighted</strong> to reflect higher difficulty.</li>
+        <li>Grade scale: 1 = Distinction (≥85%), 2 = Merit (70–84%), 3 = Pass (55–69%), 4 = Low pass (40–54%).</li>
+        <li>Use the official OU table: e.g., ≤630 = First, 631–900 = 2:1, etc.</li>
+        <li>Borderline zones require 60 credits at a higher grade to move up.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 OU Classification Tool by Ayoub1dev. Not affiliated with The Open University. Built to help students
+      understand their results.</p>
+  </footer>
 </body>
+
 </html>
